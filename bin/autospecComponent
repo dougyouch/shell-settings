@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd $HOME/work/Webiva
+export COMPONENT=$1; ./script/autospec
+unset COMPONENT

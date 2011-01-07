@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ack-grep --ruby "$1"

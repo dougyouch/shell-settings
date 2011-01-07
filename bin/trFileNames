@@ -1,0 +1,12 @@
+#!/usr/bin/env perl
+
+$from = $ARGV[0];
+$to = $ARGV[1];
+
+foreach my $file (glob('*')) {
+  $a = $file;
+  $b = $a; 
+  next unless $b =~ s/$from/$to/;
+  system( "mv \"$a\" \"$b\"" );
+}
+

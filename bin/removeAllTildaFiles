@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+find . -type f -name "*~" -exec /bin/rm -f {} \;
+find . -type f -name ".*~" -exec /bin/rm -f {} \;
+find . -type f -name "#*#" -exec /bin/rm -f {} \;
