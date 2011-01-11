@@ -25,6 +25,8 @@
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 
+(add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
+
 
 ;; Turn off use of tabs for indentation in many modes
 (setq indent-tabs-mode nil)
