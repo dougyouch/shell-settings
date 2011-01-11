@@ -26,3 +26,60 @@
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 
 
+;; Turn off use of tabs for indentation in many modes
+(setq indent-tabs-mode nil)
+
+
+;; LaTeX mode
+(add-hook 'latex-mode-hook '(lambda()
+                              (setq indent-tabs-mode nil)
+                              )
+	  )
+
+;; C mode
+(add-hook 'c-mode-hook '(lambda()
+                          (setq indent-tabs-mode nil)
+                          )
+	  )
+
+;; C++ mode
+(add-hook 'c++-mode-hook '(lambda()
+                            (setq indent-tabs-mode nil)
+                            )
+	  )
+
+;; Ruby mode
+(add-hook 'ruby-mode-hook '(lambda()
+                            (setq indent-tabs-mode nil)
+                            )
+	  )
+
+;; Javascript mode
+(add-hook 'javascript-mode-hook '(lambda()
+                          (setq indent-tabs-mode nil)
+                          )
+	  )
+
+;; Fortran mode
+(add-hook 'fortran-mode-hook '(lambda()
+				(setq indent-tabs-mode nil)
+				)
+	  )
+
+;; perl mode
+(add-hook 'perl-mode-hook '(lambda()
+                             (setq indent-tabs-mode nil)
+                             )
+	  )
+
+;; Lisp mode
+(add-hook 'lisp-mode-hook '(lambda()
+                             (setq indent-tabs-mode nil)
+                             )
+	  )
+
+;; Haml mode
+(add-hook 'haml-mode-hook '(lambda()
+                             (setq indent-tabs-mode nil)
+                             )
+	  )
