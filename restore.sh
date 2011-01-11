@@ -11,6 +11,12 @@ echo "Restore Shell scripts"
 cd $BASEDIR/bin
 tar cvf - . | ( cd $HOME/bin; tar xBpf -)
 
-echo "Restore Emacs files"
+echo "Restore XEmacs files"
 cd $BASEDIR/xemacs
 tar cvf - . | ( cd $HOME/.xemacs; tar xBpf -)
+
+echo "Restore Emacs files"
+cd $BASEDIR/emacs
+cp -fv .emacs.el $HOME
+cd $BASEDIR/emacs/.emacs.d
+cp -fv *.el $HOME/.emacs.d
