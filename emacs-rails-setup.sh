@@ -5,7 +5,7 @@
 
 sudo apt-get install ruby-elisp
 
-git clone https://github.com/remvee/emacs-rails ~/.emacs.d/emacs-rails
+git clone https://github.com/remvee/emacs-rails.git ~/.emacs.d/emacs-rails
 
 git clone git://github.com/remvee/emacs-rails.git ~/.emacs.d/rails-minor-mode
 
