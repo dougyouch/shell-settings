@@ -14,12 +14,14 @@
   ;; If there is more than one, they won't work right.
  )
 
+(tabbar-mode t)
 (tool-bar-mode 0)
 (set-face-foreground 'default "white")
 (set-face-background 'default "black")
 
 (load-file "~/.emacs.d/functions.el")
 (load-file "~/.emacs.d/modes.el")
+(load-file "~/.emacs.d/macros.el")
 
 (defun my-c-mode-common-hook ()
   (setq c-basic-offset 2)
