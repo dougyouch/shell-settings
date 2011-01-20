@@ -5,6 +5,7 @@
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(initial-buffer-choice t)
+ '(ruby-electric-expand-delimiters-list nil)
  '(scroll-bar-mode (quote right))
  '(show-paren-mode t))
 (custom-set-faces
