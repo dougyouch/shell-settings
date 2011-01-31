@@ -29,3 +29,7 @@
   (c-set-offset 'substatement-open 0)
   (c-set-offset 'defun-block-intro 2))
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+(setq mouse-yank-at-point t)

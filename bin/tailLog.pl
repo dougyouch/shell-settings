@@ -11,9 +11,13 @@ sub getFile
 {
   my $WORKDIR = $ENV{'HOME'} . '/work';
   my $DEFAULT_FILE = "$WORKDIR/Webiva/log/development.log";
-  my @FOLDERS = ( '/var/log/apache2',
-		  "$WORKDIR/Webiva/log"
+  my @FOLDERS = ( '/var/log/apache2'
 		);
+
+  foreach ( findLogDirectories($WORKDIR) ) {
+    chomp;
+    push( @FOLDERS, $_ );
+  }
 
   my @logFiles = ();
 
@@ -77,4 +81,15 @@ sub tailLog
     $cmd = 'ssh ' . $ARGV[0] . ' "' . $cmd . '"';
   }
   system( $cmd );
+}
+
+sub findLogDirectories
+{
+  my $folder = shift;
+  my $cmd = "find $folder -maxdepth 2 -type d -name log";
+
+  if( $#ARGV != -1 ) {
+    $cmd = 'ssh ' . $ARGV[0] . ' ' . $cmd;
+  }
+  return `$cmd`;
 }
