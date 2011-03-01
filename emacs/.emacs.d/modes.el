@@ -27,6 +27,8 @@
 
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 
+(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
+
 
 ;; Turn off use of tabs for indentation in many modes
 (setq indent-tabs-mode nil)
@@ -82,6 +84,18 @@
 
 ;; Haml mode
 (add-hook 'haml-mode-hook '(lambda()
+                             (setq indent-tabs-mode nil)
+                             )
+	  )
+
+;; Yaml mode
+(add-hook 'yaml-mode-hook '(lambda()
+                             (setq indent-tabs-mode nil)
+                             )
+	  )
+
+;; Yaml mode
+(add-hook 'css-mode-hook '(lambda()
                              (setq indent-tabs-mode nil)
                              )
 	  )
