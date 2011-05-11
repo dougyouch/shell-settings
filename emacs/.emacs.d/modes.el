@@ -9,6 +9,8 @@
   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
       (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 (autoload 'php-mode "php-mode" "Major mode for editing php code." t)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
@@ -29,6 +31,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 ;; Turn off use of tabs for indentation in many modes
 (setq indent-tabs-mode nil)
@@ -60,6 +64,11 @@
 
 ;; Javascript mode
 (add-hook 'javascript-mode-hook '(lambda()
+                          (setq indent-tabs-mode nil)
+                          )
+	  )
+
+(add-hook 'js2-mode-hook '(lambda()
                           (setq indent-tabs-mode nil)
                           )
 	  )

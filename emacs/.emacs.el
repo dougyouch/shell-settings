@@ -4,12 +4,13 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(css-indent-offset 2)
  '(initial-buffer-choice t)
+ '(js2-basic-offset 2)
+ '(js2-mirror-mode nil)
  '(ruby-electric-expand-delimiters-list nil)
  '(scroll-bar-mode (quote right))
- '(show-paren-mode t)
- '(css-indent-offset 2)
-)
+ '(show-paren-mode t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

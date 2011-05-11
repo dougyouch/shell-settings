@@ -28,5 +28,11 @@ if [ -d "$HOME/work/flex/bin" ] ; then
     PATH="$HOME/work/flex/bin:$PATH"
 fi
 
+if [ -d "$HOME/local/node/bin" ] ; then
+    PATH="$HOME/local/node/bin:$PATH"
+fi
+
 export RAILS_ENV=development
+export NODE_ENV=development
 export EDITOR=vi
+
